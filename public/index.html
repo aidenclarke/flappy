@@ -7,7 +7,7 @@
     <title>Aiden FlappyBird</title>
     <style>
       body {
-        background: black;
+        background: cyan;
         padding: 0px;
         margin: 0px;
       }
@@ -15,5 +15,15 @@
   </head>
   <body>
     <p>WHEN WILL YOU LEARN THAT YOUR ACTIONS HAVE CONESEQUENCES</p>
+
+    <script src="js/phaser.js"></script>
+    <script src="js/boot.js"></script>
+    
+    <script>
+      var game = new Phaser.Game(320,568);
+      game.state.add('boot',Flappy.Boot);
+      game.state.start('boot');
+    </script>
+
   </body>
 </html>
