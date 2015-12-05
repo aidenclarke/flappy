@@ -12,10 +12,10 @@ Flappy.Boot.prototype = {
   },
 
   preload: function () {
+    game.stage.backgroundColor = "#FF0000";
   },
 
   create: function () {
-    this.game.stage.backgroundColor = "orange";
   }
 
 
