@@ -1,5 +1,12 @@
 package main
 
+import "net/http"
+
+func serve(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "www/"+r.URL.Path[1:])
+}
+
 func main() {
-	println("its christmas time, yo")
+	http.HandleFunc("/", serve)
+	http.ListenAndServe(":8044", nil)
 }
